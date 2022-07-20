@@ -6,17 +6,32 @@
 }
 
 * {
-    padding: 0;
     margin: 0;
-    background-color: antiquewhite;
+    color: black;
+    background-color: beige;
+}
+
+/* INDEX */
+
+
+.logotoya {
+    background-color: black;
+    display: flex;
+    width: 200px;
+    height: auto;
+}
+
+.navbar{
+  
+}
+
+.a:hover{
+    font-size: 40px;
     color: black;
 }
 
-.body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
 
-.menu {
+.main_index {
     display: flex;
     justify-content: space-around;
     gap: var(--spacing-small);
@@ -31,42 +46,8 @@
 
 }
 
-.menu_item:hover {
-    border: 1px solid black;
-
-}
-
-.header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border-bottom: 1px solid black;
-    text-shadow: -5px 3px 13px rgba(236, 9, 9, 0.6);
-}
-
-.nav {
-    display: flex;
-    align-items: center;
-}
-
-.logotoya {
-    display: flex;
-    width: 200px;
-    height: auto;
-}
-
-.section {
-    display: grid;
-    background-color: burlywood;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    justify-content: center;
-}
-
-.main {
-    max-width: 1200px;
-    margin: auto;
-    margin-top: var(--spacing-small);
+.animaciones_div {
+    background-image: linear-gradient(yellow, black);
 }
 
 .caja1 {
@@ -74,92 +55,99 @@
     max-width: 1200px;
     flex-direction: column;
     align-items: center;
-    border-bottom: 1px solid red;
-}
-
-.texto1 {
-    text-shadow: -6px -10px 9px rgba(14, 13, 13, 0.6);
+    background-image: linear-gradient(rgb(83, 67, 67), yellow);
+    transform: rotate(360deg);
 }
 
 .caja2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid red;
+    background-image: linear-gradient(rgb(109, 88, 88), yellow);
 }
+
+.historia{
+    display: flex;
+    flex-direction: row;
+}
+
+.texto1{
+    background-image: linear-gradient(rgb(110, 88, 88), yellow);
+
+}
+
 
 .texto2 {
-    text-shadow: -6px -10px 9px rgba(14, 13, 13, 0.6);
+    background-image: linear-gradient(rgb(110, 88, 88), yellow);
+    text-shadow: -6px -10px 9px rgba(78, 71, 71, 0.6);
 }
 
-.nav a {
-    text-decoration: none;
-    margin: 1rem;
+.imagen_amazando{
+    width: min-content;
+    height: min-content;
 }
 
-.footer {
+.footer_index {
     display: flex;
-    justify-content: space-around;
-}
-
-.inicio {
-    display: flex;
-    flex-direction: column;
-    border-bottom: 1px solid red;
-    align-items: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-----Comidas----- .inicio:hover {
-    border: 1px solid black;
-}
-
-.comidas {
-    display: flex;
-    max-width: min-content;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-
-}
-
-.estilos_de_comidas {
-    max-width: 860px;
-}
-
-.footer_comidas {
-    display: flex;
-    color: crimson;
-    font-size: larger;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: space-evenly;
-    border-top: 1px solid red;
-}
-
-.galeria {
-    display: grid;
-    align-content: center;
-    justify-content: space-around;
-    grid-template-columns: max-content;
-    grid-template-rows: auto;
-
-
-}
-
-.inicio-comidas {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
-}
-
---ubicacion-- .ubicacion {
+    flex-direction: row;
     justify-content: center;
-    max-width: max-content;
+    background-image: linear-gradient(rgb(92, 73, 73), yellow);
+}
+
+
+/* Estilos para la web comidas */
+
+
+/* COMIDAS */
+
+
+.cards {
+    perspective: 500px;
+  }
+  
+  .card {
+    width: 200px;
+    height: 250px;
+    background: #16161d;
+    border: 2px solid #555555;
+    border-radius: 4px;
+    position: relative;
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition: transform .5s;
+  }
+  
+  .card:hover {
+    transform: translateZ(10px) rotateX(20deg) rotateY(20deg);
+  }
+  
+  .card_title {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    transition: transform .5s;
+    font: 700 1.5rem monospace;
+    text-shadow: -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+  }
+  
+  .card:hover .card_title {
+    transform: translateZ(50px);
+  }
+
+/* UBICACION */
+
+
+
+
+ .ubicacion {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   align-content: center;
+   justify-content: center;
+
 
 }
 
@@ -177,73 +165,51 @@
     font-variant: small-caps;
 }
 
-@media screen and (max-width:1254px){
-    .body{
-        background-color: brown;
-    }
-    .section{
-        grid: 100px;
-       text-align: center;
-       font-size: medium;
+/* media para celulares */
 
-    }
-    .footer{
-        background-color: chocolate;
-    }
-    .texto1{
-        gap: var(--spacing-large);
-        font-size: medium;
-        max-width: 1240px;
-    }
+@media (min-width: 320px) and (max-width:576px){
 
-}
-
-@media screen and (min-width:360px) and (max-width:768px){
-    .body{
-        background-color: chocolate;
-    }
-    .section{
-        grid: 50px;
-        text-align: center;
-        font-size: clamp(1rem, 15vw, 1rem)
-    }
-    .footer{
-        background-color: blueviolet;
-    }
-    .nav{
-        display: flex;
-        font-size: small;
-    }
-    .main{
-        background-color: chocolate;
-    }
+    
     .imagen_amazando{
-        width: 50%;
-        height: 50%;
+        font-size: small;
+        line-height: 1em;
+        padding: 1em;
+        margin: 1em;
     }
-   .texto1{
-    background-color: cornflowerblue;
-    gap:var(--spacing-small);
-    font-size: x-small;
-    max-width: 768px;
-   }
-   .historia{
-    background-color: cornflowerblue;
-  font-size: smaller;
-   }
-   .cultura{
-    background-color: cadetblue;
-    font-size: smaller;
-   }
-   .texto2{
-    text-decoration-color: blueviolet;
-    background-color: firebrick;
-    gap:var(--spacing-small);
-    font-size: x-small;
-    max-width: 768px;
 
-   }
+    .main_index{
+        font-size: small;
+        line-height: 1em;
+        padding: 1em;
+        margin: 1em;
+    }
+   
+
 }
+
+/* media para tablet */
+@media (min-width: 576px) and (max-width:991px){
+
+    .main_index{
+        font-size: small;
+        line-height: 1em;
+        padding: 1em;
+        margin: 1em;
+    }
+    
+
+    .imagen_amazando{
+        font-size: small;
+        line-height: 1em;
+        padding: 1em;
+        margin: 1em;
+    }
+    
+}
+
+/* media para desktop */
+
+@media (min-width: 991px) and (max-width: 1200px)
 
 
 
